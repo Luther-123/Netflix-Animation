@@ -1,0 +1,283 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.netflix-n {
+    position: relative;
+    width: 130px;
+    height: 150px;
+    transform-style: preserve-3d;
+    animation: finalRush 2.5s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    animation-delay: 2s;
+}
+
+.netflix-n span {
+    position: absolute;
+    top: 0;
+    width: 3px;
+    background: linear-gradient(135deg, #ff1e1e 0%, #E50914 50%, #83040a 100%);
+    border-radius: 1px;
+    z-index: 1;
+    opacity: 0;
+    animation-duration: 4s;
+    animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+    animation-fill-mode: forwards;
+}
+
+.slice-1,
+.slice-2,
+.slice-3,
+.slice-4,
+.slice-5,
+.slice-6,
+.slice-7,
+.slice-8,
+.slice-9,
+.slice-10 {
+    height: 150px;
+    transform-origin: bottom;
+    animation-name: leftPillarAnim;
+}
+
+.slice-1 {
+    left: 0px;
+}
+
+.slice-2 {
+    left: 3px;
+}
+
+.slice-3 {
+    left: 6px;
+}
+
+.slice-4 {
+    left: 9px;
+}
+
+.slice-5 {
+    left: 12px;
+}
+
+.slice-6 {
+    left: 15px;
+}
+
+.slice-7 {
+    left: 18px;
+}
+
+.slice-8 {
+    left: 21px;
+}
+
+.slice-9 {
+    left: 24px;
+}
+
+.slice-10 {
+    left: 27px;
+}
+
+.slice-11,
+.slice-12,
+.slice-13,
+.slice-14,
+.slice-15,
+.slice-16,
+.slice-17,
+.slice-18,
+.slice-19,
+.slice-20 {
+    height: 170px;
+    top: 12px;
+    transform-origin: top left;
+    z-index: 2;
+    animation-name: bridgeAnim;
+}
+
+.slice-11 {
+    left: 5px;
+}
+
+.slice-12 {
+    left: 8px;
+}
+
+.slice-13 {
+    left: 11px;
+}
+
+.slice-14 {
+    left: 14px;
+}
+
+.slice-15 {
+    left: 17px;
+}
+
+.slice-16 {
+    left: 20px;
+}
+
+.slice-17 {
+    left: 23px;
+}
+
+.slice-18 {
+    left: 26px;
+}
+
+.slice-19 {
+    left: 29px;
+}
+
+.slice-20 {
+    left: 32px;
+}
+
+.slice-21,
+.slice-22,
+.slice-23,
+.slice-24,
+.slice-25,
+.slice-26,
+.slice-27,
+.slice-28,
+.slice-29,
+.slice-30 {
+    height: 150px;
+    transform-origin: bottom;
+    animation-name: rightPillarAnim;
+}
+
+.slice-21 {
+    left: 79px;
+}
+
+.slice-22 {
+    left: 82px;
+}
+
+.slice-23 {
+    left: 85px;
+}
+
+.slice-24 {
+    left: 88px;
+}
+
+.slice-25 {
+    left: 91px;
+}
+
+.slice-26 {
+    left: 94px;
+}
+
+.slice-27 {
+    left: 97px;
+}
+
+.slice-28 {
+    left: 100px;
+}
+
+.slice-29 {
+    left: 103px;
+}
+
+.slice-30 {
+    left: 106px;
+}
+
+@keyframes leftPillarAnim {
+
+    0%,
+    3% {
+        transform: translateX(0) scaleY(0);
+        opacity: 0;
+    }
+
+    15%,
+    75% {
+        transform: translateX(0) scaleY(1);
+        opacity: 1;
+    }
+
+    85% {
+
+        transform: translateX(-15px) scaleY(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-40px) scaleY(0);
+        opacity: 0;
+    }
+}
+
+
+@keyframes bridgeAnim {
+
+    0%,
+    18% {
+        transform: rotate(-26.5deg) scaleY(0);
+        opacity: 0;
+    }
+
+    30%,
+    60% {
+        transform: rotate(-26.5deg) scaleY(1);
+        opacity: 1;
+    }
+
+    75%,
+    100% {
+        transform: rotate(-26.5deg) scaleY(0);
+        opacity: 0;
+    }
+}
+
+
+@keyframes rightPillarAnim {
+
+    0%,
+    33% {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    45%,
+    48% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+
+    60%,
+    100% {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+}
+
+@keyframes finalRush {
+    0% {
+        transform: translateZ(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateZ(2000px) translateX(1200px) scale(25);
+        opacity: 1;
+
+    }
+}
